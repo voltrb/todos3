@@ -1,3 +1,3 @@
-# Start your docs here.
+# Sample Volt Project
 
-# See Volt docs at https://github.com/voltrb/volt/blob/master/Readme.md
+This is a WIP and has a few broken things in it.  Should give you a basic demo to volt though.
