@@ -1,0 +1,18 @@
+<:Title>
+  {first._title}
+
+<:Body>
+  {#if first.state == :loaded}
+    <h1>{first._title}</h1>
+
+    <p>{first._body}</p>
+
+    {#each first._comments as comment}
+      <:comments comment="{comment}" />
+    {/}
+
+    <:comments:new post="{first}" />
+
+  {#else}
+    <p>Loading... {first.html_inspect}</p>
+  {/}

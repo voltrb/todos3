@@ -1,0 +1,13 @@
+<:Title>
+  New Post
+
+<:Body>
+  <h1>New Blog Post</h1>
+
+  <form e-submit="save" role="form">
+    <:fields:text value="{_title}" label="Title:" />
+
+    <:fields:textarea value="{_body}" label="Post:" />
+
+    <button>Save</button>
+  </form>

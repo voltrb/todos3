@@ -1,0 +1,51 @@
+<:Title>
+  Todos
+
+<:Body>
+  <div class="row">
+    <div class="col-md-4">
+
+      <h1>{_todos.size} Todos</h1>
+
+      <div class="row">
+        <div class="col-md-6">
+          <p>{_completed} complete</p>
+        </div>
+        <div class="col-md-6">
+          <button e-click="check_all">Check All</button>
+        </div>
+      </div>
+
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {_percent_complete}%;">
+          {_percent_complete}%
+        </div>
+      </div>
+
+      <table class="table todo-table">
+        {#each _todos as todo}
+          <tr
+            class="{#if params._index == index}selected{/}"
+            e-click="params._index = index">
+            <td><input type="checkbox" checked="{todo._complete}" /></td>
+            <td class="{#if todo._complete}complete{/}">{todo._label}</td>
+            <td><button e-click="self._todos.delete_at(index)">X</button></td>
+          </tr>
+        {/}
+      </table>
+
+      <form e-submit="add_todo" role="form">
+        <div class="form-group">
+           <label>Add Todo:</label>
+           <input class="form-control" type="text" value="{_new_todo._label}" />
+        </div>
+      </form>
+    </div>
+    <div class="col-md-8">
+      {#if _current_todo}
+        <h2>{_current_todo._label}</h2>
+
+        <textarea>{_current_todo._description}</textarea>
+      {/}
+    </div>
+  </div>
