@@ -1,8 +1,10 @@
+require 'pry'
 class MainController < ModelController
   def todos
-    self.model = :store
-    self._current_todo = _todos[params._index.to_i]
-    self._completed = _todos.count {|v| v._complete }
+    self.model             = :store
+    self._new_todo         = Todo.new
+    self._current_todo     = _todos[params._index.to_i]
+    self._completed        = _todos.count {|v| v._complete }
     self._percent_complete = ((_completed / _todos.size.to_f) * 100.0).round
 
     params._index.on('changed') { puts "INDEX CHANGED" }

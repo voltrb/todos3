@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'volt', '0.7.16'#, path: '/Users/ryanstout/Sites/volt/volt'
-#, '0.7.16'
+gem 'volt', path: '~/apps/volt/volt'
 
 
 # The following gem's are optional for themeing

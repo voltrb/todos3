@@ -25,7 +25,7 @@
       <table class="table todo-table">
         {#each _todos as todo}
           <tr
-            class="{#if params._index == index}selected{/}"
+            class="{#if params._index.to_i == index}selected{/}"
             e-click="params._index = index">
             <td><input type="checkbox" checked="{todo._complete}" /></td>
             <td class="{#if todo._complete}complete{/}">{todo._label}</td>
