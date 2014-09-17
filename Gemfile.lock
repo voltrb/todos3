@@ -1,5 +1,6 @@
-PATH
-  remote: ~/apps/volt/volt
+GIT
+  remote: git://github.com/voltrb/volt.git
+  revision: 9f9391b986c976fe09dbee2aa803c13fdbae0fdc
   specs:
     volt (0.7.18)
       listen (~> 2.7.0)
