@@ -93,7 +93,7 @@ GEM
       yui-compressor (~> 0.12.0)
     volt-bootstrap (0.0.5)
     volt-bootstrap-jumbotron-theme (0.0.3)
-    volt-fields (0.0.4)
+    volt-fields (0.0.5)
     volt-sockjs (0.3.4.4)
       faye-websocket (~> 0.7.1)
       json
