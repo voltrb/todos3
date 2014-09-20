@@ -1,3 +1,22 @@
+GIT
+  remote: git://github.com/voltrb/volt.git
+  revision: 9f9391b986c976fe09dbee2aa803c13fdbae0fdc
+  specs:
+    volt (0.7.18)
+      listen (~> 2.7.0)
+      mongo (~> 1.9.0)
+      opal (~> 0.6.0)
+      opal-jquery (~> 0.2.0)
+      pry (~> 0.9.12.0)
+      rack (~> 1.5.0)
+      rake (~> 10.0.4)
+      rspec (= 3.0.0.beta1)
+      sass (~> 3.2.5)
+      sprockets-sass (~> 1.0.0)
+      thor (~> 0.18.0)
+      uglifier (~> 2.4.0)
+      yui-compressor (~> 0.12.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -11,7 +30,7 @@ GEM
     diff-lcs (1.2.5)
     eventmachine (1.0.3)
     execjs (2.2.1)
-    faye-websocket (0.7.3)
+    faye-websocket (0.7.4)
       eventmachine (>= 0.12.0)
       websocket-driver (>= 0.3.1)
     ffi (1.9.3)
@@ -77,20 +96,6 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    volt (0.7.16)
-      listen (~> 2.7.0)
-      mongo (~> 1.9.0)
-      opal (~> 0.6.0)
-      opal-jquery (~> 0.2.0)
-      pry (~> 0.9.12.0)
-      rack (~> 1.5.0)
-      rake (~> 10.0.4)
-      rspec (= 3.0.0.beta1)
-      sass (~> 3.2.5)
-      sprockets-sass (~> 1.0.0)
-      thor (~> 0.18.0)
-      uglifier (~> 2.4.0)
-      yui-compressor (~> 0.12.0)
     volt-bootstrap (0.0.5)
     volt-bootstrap-jumbotron-theme (0.0.3)
     volt-fields (0.0.5)
@@ -100,7 +105,7 @@ GEM
       rack
       rack-mount (~> 0.8.3)
       thin
-    websocket-driver (0.3.3)
+    websocket-driver (0.3.4)
     yui-compressor (0.12.0)
 
 PLATFORMS
@@ -110,7 +115,7 @@ DEPENDENCIES
   bson_ext (~> 1.9.0)
   jubilee
   thin (~> 1.6.0)
-  volt (= 0.7.16)
+  volt!
   volt-bootstrap
   volt-bootstrap-jumbotron-theme
   volt-fields
