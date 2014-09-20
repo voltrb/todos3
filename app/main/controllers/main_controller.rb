@@ -9,8 +9,8 @@ class MainController < ModelController
   end
 
   def add_todo
-    self._todos << _new_todo.cur
-    self._new_todo = {}
+    self._todos << page._new_todo.cur
+    page._new_todo = {}
   end
 
   def check_all
