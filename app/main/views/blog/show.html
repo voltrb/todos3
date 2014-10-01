@@ -1,18 +1,21 @@
 <:Title>
-  {first._title}
+  {_title}
 
 <:Body>
-  {#if first.state == :loaded}
-    <h1>{first._title}</h1>
+  {model.html_inspect}
+  {model._comments.html_inspect}
+  {#if model && state == :loaded}
+    SHOWING
+    <h1>{_title}</h1>
 
-    <p>{first._body}</p>
+    <p>{_body}</p>
 
-    {#each first._comments as comment}
+    <!-- {#each model._comments as comment}
       <:comments comment="{comment}" />
-    {/}
+    {/} -->
 
-    <:comments:new post="{first}" />
+    <:comments:new post="{model}" />
 
   {#else}
-    <p>Loading... {first.html_inspect}</p>
+    <p>Loading... {model.html_inspect}</p>
   {/}

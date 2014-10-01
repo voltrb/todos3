@@ -4,9 +4,12 @@ class BlogController < ModelController
   end
 
   def show
-    result = store._posts.find(_id: params._id)
-
-    self.model = result
+    result = store._posts.find(_id: params._id).then do |results|
+      puts "GOT: #{results.inspect}"
+      `setTimeout(function() {`
+      self.model = results[0]
+      `}, 1000);`
+    end
   end
 
   def new

@@ -9,7 +9,7 @@
 
       <div class="row">
         <div class="col-md-6">
-          <p>{_completed} complete</p>
+          <p>{completed} complete</p>
         </div>
         <div class="col-md-6">
           <button e-click="check_all">Check All</button>
@@ -17,8 +17,8 @@
       </div>
 
       <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {_percent_complete}%;">
-          {_percent_complete}%
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {percent_complete}%;">
+          {percent_complete}%
         </div>
       </div>
 
@@ -42,10 +42,10 @@
       </form>
     </div>
     <div class="col-md-8">
-      {#if _current_todo}
-        <h2>{_current_todo._label}</h2>
+      {#if current_todo}
+        <h2>{current_todo._label}</h2>
 
-        <textarea>{_current_todo._description}</textarea>
+        <textarea>{current_todo._description}</textarea>
       {/}
     </div>
   </div>

@@ -1,10 +1,11 @@
 class CommentsController < ModelController
   def index
-    self.model = @comment
+    self.model = data.comment
   end
 
   def new
-    self.model = @post._comments.buffer
+    puts "Data.Post: #{data.post._comments.buffer.inspect}"
+    self.model = data.post._comments.buffer
   end
 
   def add_comment
