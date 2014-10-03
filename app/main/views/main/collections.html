@@ -22,8 +22,22 @@
     </tr>
     <tr>
       <td>store</td>
-      <td><input type="text" value="{store._items[0]._name}" /></td>
-      <td><input type="text" value="{store._items[0]._name}" /></td>
+      <td><input type="text" value="{store._items[0] && store._items[0]._name}" /></td>
+      <td><input type="text" value="{store._items[0] && store._items[0]._name}" /></td>
     </tr>
   </table>
 
+  <select value="{page._state}">
+    <option value="">Select</option>
+    <option value="montana">Montana</option>
+    <option value="georgia">Georgia</option>
+  </select>
+
+  <input type="text" value="{page._state}" />
+  <input type="text" value="{page._opts}" />
+
+<!--  <select value="{page._sel_opt}">
+    {#each options as opt}
+      <option value="{opt}">{opt}</option>
+    {/}
+  </select> -->

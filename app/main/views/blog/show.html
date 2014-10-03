@@ -2,17 +2,14 @@
   {_title}
 
 <:Body>
-  {model.html_inspect}
-  {model._comments.html_inspect}
-  {#if model && state == :loaded}
-    SHOWING
+  {#if model && model.persistor && state == :loaded}
     <h1>{_title}</h1>
 
     <p>{_body}</p>
 
-    <!-- {#each model._comments as comment}
+    {#each model._comments as comment}
       <:comments comment="{comment}" />
-    {/} -->
+    {/}
 
     <:comments:new post="{model}" />
 

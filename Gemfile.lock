@@ -1,12 +1,12 @@
 PATH
   remote: /Users/ryanstout/Sites/volt/apps/volt-fields
   specs:
-    volt-fields (0.0.5)
+    volt-fields (0.0.6)
 
 PATH
   remote: /Users/ryanstout/Sites/volt/volt
   specs:
-    volt (0.7.22)
+    volt (0.8.0)
       capybara (~> 2.4.2)
       chromedriver2-helper (~> 0.0.8)
       listen (~> 2.7.0)
@@ -41,7 +41,7 @@ GEM
       xpath (~> 2.0)
     celluloid (0.16.0)
       timers (~> 4.0.0)
-    childprocess (0.5.3)
+    childprocess (0.5.5)
       ffi (~> 1.0, >= 1.0.11)
     chromedriver2-helper (0.0.8)
       nokogiri

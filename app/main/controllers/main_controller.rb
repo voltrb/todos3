@@ -3,6 +3,20 @@ class MainController < ModelController
     self.model = :store
   end
 
+  def todos_ready
+    puts "TODOS READY"
+  end
+
+  def todos_removed
+    puts "TODOS REMOVED"
+  end
+
+  def options
+    vals = page._opts.to_s.or('').split(/,/)
+
+    return vals
+  end
+
   def percent_complete
     return ((completed.or(0) / _todos.size.to_f) * 100.0).round
   end
@@ -15,6 +29,9 @@ class MainController < ModelController
     _todos[params._index.or(0).to_i]
   end
 
+  def all_complete
+    completed == _todos.size
+  end
 
   def add_todo
     self._todos << page._new_todo
