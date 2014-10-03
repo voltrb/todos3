@@ -3,14 +3,6 @@ class MainController < ModelController
     self.model = :store
   end
 
-  def todos_ready
-    puts "TODOS READY"
-  end
-
-  def todos_removed
-    puts "TODOS REMOVED"
-  end
-
   def options
     vals = page._opts.to_s.or('').split(/,/)
 
