@@ -1,17 +1,17 @@
 <:Title>
-  Edit {_title}
+  Edit {{ _title }}
 
 <:Body>
-  {#if state != :loaded}
+  {{ if state != :loaded }}
     <h1>Loading...</h1>
-  {#else}
-    <h1>{_title}</h1>
+  {{ else }}
+    <h1>{{ _title }}</h1>
 
     <form e-submit="save" role="form">
-      <:fields:text value="{_title}" label="Title:" />
+      <:fields:text value="{{ _title }}" label="Title:" />
 
-      <:fields:textarea value="{_body}" label="Post:" />
+      <:fields:textarea value="{{ _body }}" label="Post:" />
 
       <button>Save</button>
     </form>
-  {/}
+  {{ end }}

@@ -8,13 +8,13 @@
     <a href="/blog/new">New Post</a>
   </p>
 
-  {#each _posts as post}
-    <h2><a href="/blog/{post._id}">{post._title}</a></h2>
+  {{ _posts.each do |post| }}
+    <h2><a href="/blog/{{ post._id }}">{{ post._title }}</a></h2>
     <p>
-      <a href="/blog/{post._id}/edit">edit</a> |
+      <a href="/blog/{{ post._id }}/edit">edit</a> |
       <a e-click="_posts.delete_at(index)">remove</a>
     </p>
 
-    <p>{post._body}</p>
+    <p>{{ post._body }}</p>
 
-  {/}
+  {{ end }}
