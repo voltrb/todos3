@@ -37,6 +37,7 @@ class MainController < ModelController
   end
 
   def collections
+    # Create an empty item to test things with
     store._items.then do
       if store._items.size == 0
         store._items << {_name: ''}
