@@ -101,7 +101,7 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    volt (0.8.10)
+    volt (0.8.11)
       bundler (>= 1.5)
       capybara (~> 2.4.2)
       chromedriver2-helper (~> 0.0.8)
