@@ -5,12 +5,10 @@ get "/about", _action: 'about'
 get "/collections/{{_route}}", _action: 'collections'
 get "/collections", _action: 'collections'
 
-get "/blog/{{_id}}/edit", _controller: 'blog', _action: 'edit'
-get "/blog/{{_id}}", _controller: 'blog', _action: 'show'
-get "/blog", _controller: 'blog', _action: 'index'
+get "/blog/{{__id}}/edit", _controller: 'blog', _action: 'edit'
+get "/blog/{{__id}}", _controller: 'blog', _action: 'show'
 get "/blog/new", _controller: 'blog', _action: 'new'
-
-
+get "/blog", _controller: 'blog', _action: 'index'
 
 # The main route
 get '/'
