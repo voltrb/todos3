@@ -1,4 +1,4 @@
-class MainController < ModelController
+class MainController < Volt::ModelController
   def todos
     self.model = :store
   end

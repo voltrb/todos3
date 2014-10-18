@@ -17,7 +17,7 @@
       </div>
 
       <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{ percent_complete }}%;">
+        <div class="progress-bar" role="progressbar" style="width: {{ percent_complete }}%;">
           {{ percent_complete }}%
         </div>
       </div>
@@ -25,7 +25,7 @@
       <table class="table todo-table">
         {{ _todos.each do |todo| }}
           <tr
-            class="{{ if params._index == index }}selected{{ end }}"
+            class="{{ if params._index.or(0).to_i == index }}selected{{ end }}"
             e-click="params._index = index">
             <td><input type="checkbox" checked="{{ todo._complete }}" /></td>
             <td class="{{ if todo._complete }}complete{{ end }}">{{ todo._label }}</td>

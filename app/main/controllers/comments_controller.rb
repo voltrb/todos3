@@ -1,4 +1,4 @@
-class CommentsController < ModelController
+class CommentsController < Volt::ModelController
   def index
     self.model = attrs.comment
   end

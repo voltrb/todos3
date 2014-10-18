@@ -1,2 +1,2 @@
-class Todo < Model
+class Todo < Volt::Model
 end

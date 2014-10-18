@@ -1,4 +1,4 @@
-class BlogController < ModelController
+class BlogController < Volt::ModelController
   def index
     self.model = :store
   end
