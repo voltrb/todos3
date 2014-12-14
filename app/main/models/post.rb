@@ -1,4 +1,4 @@
 class Post < Volt::Model
-  validate :_title, length: 5
-  validate :_body, length: 20
+  validate :title, length: 5
+  validate :body, length: 20
 end

@@ -1,4 +1,6 @@
 class MainController < Volt::ModelController
+  model :page
+
   def todos
     self.model = :store
   end

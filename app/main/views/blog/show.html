@@ -1,8 +1,10 @@
 <:Title>
-  {{ _title }}
+  {{ if loaded? }}
+    {{ _title }}
+  {{ end }}
 
 <:Body>
-  {{ if model && model.persistor && state == :loaded }}
+  {{ if loaded? }}
     <h1>{{ _title }}</h1>
 
     <p>{{ _body }}</p>
